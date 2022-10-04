@@ -1,0 +1,21 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "AKIAUBB3P3MKKUVWN3E3",
+            "secret_key": "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",
+            "region": "us-east-1",
+            "ami_name": "my-first-ami-3",
+            "source_ami": "ami-026b57f3c383c2eec",
+            "instance_type" : "t2.micro",
+            "ssh_username": "ec2-user"
+        }
+    ],
+    "provisioners":[
+        {
+            "type": "shell",
+            "script": "./project/setup.sh"
+        }
+    
+    ]
+}
